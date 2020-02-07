@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 from datetime import date
 import os
 
+#Intializing instance of class CascadeClassifier
+face_detect = cv2.CascadeClassifier(os.getcwd() + "\\haarcascade_frontalface_alt.xml")
 
 path = input("Enter the path of the picture : (enter cwd for current working directory)")
 
@@ -33,10 +35,9 @@ src = cv2.imread(name)
 img = cv2.cvtColor(src, cv2.COLOR_BGR2RGB)
 
 #Location of haarcascade_frontalface_alt.xml file in my PC
-face_detect = cv2.CascadeClassifier("C:\\Users\lenovo\Desktop\haarcascade_frontalface_alt.xml")
 faces = face_detect.detectMultiScale(img, 1.1, 2)
 
-#if there are no faces detected, then line 37 return a tuple instead of an array
+#if there are no faces detected, then line 38 return a tuple instead of an array
 if type(faces) == type(np.array([1])):
     #To access List functionalities
     faces = faces.tolist()

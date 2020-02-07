@@ -1,6 +1,7 @@
 # Stickers_generator
 Small project on image recognition
 
+## Make sure to add __haarcascade_frontalface_alt.xml__ file to your current working directory
 
 ## Adding stickers to WhatsApp...
 Move these to WhatsApp > Media > Whatsapp Stickers and have a great time
